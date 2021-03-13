@@ -1,0 +1,130 @@
+/****** globals variables ********/
+:root {
+    --color1: #eeeeee;
+    --color2: #FF5A5F;
+    --color3: #232323;
+}
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1600px;
+}
+/***** style header ******/
+.header {
+    width: 100%;
+    height:70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 26px;
+    position: absolute;
+}
+
+.header__logo {
+    line-height: 28px;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.header__logo img {
+    height: 24px;
+}
+
+.header__logo span{
+    color: var( --color1);
+}
+
+.header__menu {
+    display: flex;
+    gap: 16px;
+    line-height: 28px;
+    align-items: center;
+}
+
+.header__menu a {
+    text-decoration: none;
+    color: var( --color1);
+}
+
+/***** style main ******/
+
+.main {
+    background-image: url('./img/hero.png');
+    background-size: cover;
+    padding: 132px 0 110px 80px;
+}
+
+.form {
+    width: 392px;
+    height: 508px;
+    display: grid;
+    grid-template-areas:
+        "title-form title-form"
+        "input-where input-where"
+        "input-arrival input-departure"
+        "input-developers input-developers"
+        "search search"
+    ;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--color1);
+    border-radius: 16px;
+    padding: 32px 24px 24px 24px;
+}
+
+.form input {
+    height: 48px;
+    border: 1px solid var(--color3);
+    border-radius: 4px;
+}
+
+.form__title {
+    grid-area: title-form;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38px;
+}
+
+.form__input--where {
+    grid-area: input-where;
+}
+
+.form__input--where input {
+    width: 100%;
+}
+
+.form__input--arrival {
+    grid-area: input-arrival;
+}
+
+.form__input--departure {
+    grid-area: input-departure;
+}
+
+.form__input--arrival input,
+.form__input--departure input {
+    width: 172px;
+}
+
+.form__input--developers {
+    grid-area: input-developers;
+}
+
+.form__input--developers input {
+    width: 100%;
+}
+
+.form__submit {
+    grid-area: search;
+    position: relative;
+}
+
+.form__submit input{
+    background-color: var(--color2);
+}
